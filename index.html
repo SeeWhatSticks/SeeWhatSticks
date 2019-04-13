@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>See What Sticks</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Material -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Local Project Files -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>See What Sticks</h1>
+    <div id="container">
+        <div id="itf_controls" class="">
+            <button id="btn_prepare">Prepare</button>
+            <button id="btn_beginPlayback" hidden>Begin Playback</button>
+        </div>
+        <div id="itf_journey" class="">
+            <h2>We are on a journey...</h2>
+            <p>... so could you hit me <span id="fld_loop1_repeats">4</span> more times...</p>
+            <input type="range" id="rng_loop1_repeats" min="0" max="8" value="4">
+            <p>... with the:</p>
+            <div class="row">
+                <div class="col m3">
+                    <div class="card">
+                        <button id="btn_loop1_bass" class="btn" disabled>Electric Bass</button><br>
+                        <button id="btn_loop1_pizz" class="btn">Upgright Bass</button>
+                    </div>
+                </div>
+                <div class="col m3">
+                    <div class="card">
+                        <button id="btn_loop1_chords" class="btn" disabled>Open Chords</button><br>
+                        <button id="btn_loop1_arp" class="btn">Downward Arp</button>
+                    </div>
+                </div>
+                <div class="col m3">
+                    <div class="card">
+                        <button id="btn_loop1_pulseOn" class="btn" disabled>Pulse On</button><br>
+                        <button id="btn_loop1_pulseOff" class="btn">Pulse Off</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
