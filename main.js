@@ -7,7 +7,7 @@ const seeWhatSticks = {
       segments: {
         intro: {
           name: "Introduction",
-          titles: ["intro_arp", "intro_bass", "intro_hats"],
+          titles: ["arp", "bass", "hats"],
           duration: 24.303791666666665,
           startLogic: function() {
             for (track of Object.values(this.tracks)) {
@@ -23,7 +23,7 @@ const seeWhatSticks = {
         },
         loop1: {
           name: "First Loop",
-          titles: ["loop1_arp", "loop1_bass", "loop1_pizz", "loop1_drums", "loop1_hats", "loop1_pianoarp", "loop1_pianochord", "loop1_pulse"],
+          titles: ["arp", "bass", "pizz", "drums", "hats", "pianoarp", "pianochord", "pulse"],
           duration: 12.151895833333333,
           bass: true,
           chords: true,
@@ -62,7 +62,7 @@ const seeWhatSticks = {
         },
         loop2: {
           name: "Second Loop",
-          titles: ["loop2_arp", "loop2_bass", "loop2_drums", "loop2_guitar", "loop2_hats", "loop2_piano"],
+          titles: ["arp", "bass", "drums", "guitar", "hats", "piano"],
           duration: 24.303791666666665,
           startLogic: function() {
             for (track of Object.values(this.tracks)) {
@@ -101,7 +101,7 @@ function initialise() {
       segmentObject.controls = {};
       for (let i = 0; i < segmentObject.titles.length; i++) {
         let title = segmentObject.titles[i];
-        segmentObject.tracks[title] = song + "/" + title + ".mp3";
+        segmentObject.tracks[title] = song + "/" + segment + "/" + title + ".mp3";
       }
     }
   }
