@@ -35,21 +35,21 @@ const seeWhatSticks = {
               this.firstRun = false;
             }
             let startTime = seeWhatSticks.nextLoopTime;
-            playAudio(this.tracks.loop1_arp, startTime);
-            playAudio(this.tracks.loop1_drums, startTime);
-            playAudio(this.tracks.loop1_hats, startTime);
+            playAudio(this.tracks.arp, startTime);
+            playAudio(this.tracks.drums, startTime);
+            playAudio(this.tracks.hats, startTime);
             if (this.bass) {
-              playAudio(this.tracks.loop1_bass, startTime);
+              playAudio(this.tracks.bass, startTime);
             } else {
-              playAudio(this.tracks.loop1_pizz, startTime);
+              playAudio(this.tracks.pizz, startTime);
             }
             if (this.chords) {
-              playAudio(this.tracks.loop1_pianochord, startTime);
+              playAudio(this.tracks.pianochord, startTime);
             } else {
-              playAudio(this.tracks.loop1_pianoarp, startTime);
+              playAudio(this.tracks.pianoarp, startTime);
             }
             if (this.pulse) {
-              playAudio(this.tracks.loop1_pulse, startTime);
+              playAudio(this.tracks.pulse, startTime);
             }
             incNextLoopTime(this.duration);
             if ($("#rng_loop1_repeats").val() > 0) {
@@ -96,11 +96,11 @@ function initialise() {
       segmentObject = seeWhatSticks.songs[song].segments[segment];
       segmentObject.song = song;
       segmentObject.segment = segment;
-      segmentObject.paths = [];
       segmentObject.tracks = {};
       segmentObject.controls = {};
       for (let i = 0; i < segmentObject.titles.length; i++) {
         let title = segmentObject.titles[i];
+        console.log(song + "/" + segment + "/" + title + ".mp3");
         segmentObject.tracks[title] = song + "/" + segment + "/" + title + ".mp3";
       }
     }
